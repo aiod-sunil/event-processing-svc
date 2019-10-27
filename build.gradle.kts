@@ -35,6 +35,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
+    implementation("org.springframework.boot:spring-boot-devtools")
+
 }
 tasks.withType<Test> {
     useJUnitPlatform()
@@ -45,4 +47,8 @@ tasks.withType<KotlinCompile> {
         freeCompilerArgs = listOf("-Xjsr305=strict")
         jvmTarget = "1.8"
     }
+}
+configurations.all {
+    exclude(module = "jakarta.validation-api")
+    exclude(module = "hibernate-validator")
 }
