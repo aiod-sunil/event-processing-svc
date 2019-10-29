@@ -6,6 +6,6 @@ import java.time.LocalDateTime
 import java.util.*
 
 @Document
-data class Event(@Id val name: String,
+data class Event(var  id: String?=null,@Id val name: String,
                  val type: String, val status: String,
                  val date: LocalDateTime= LocalDateTime.now())
