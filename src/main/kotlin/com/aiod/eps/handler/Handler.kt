@@ -1,11 +1,12 @@
 package com.aiod.eps.handler
 
-import com.aiod.eps.model.Event
 import com.aiod.eps.repository.EventRepository
+import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 @Suppress("UNUSED_PARAMETER")
+@Component
 class EventHandler(
         private val repository: EventRepository
 ) {

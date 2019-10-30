@@ -5,7 +5,9 @@ import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query.query
 import org.springframework.data.mongodb.core.query.isEqualTo
+import org.springframework.stereotype.Repository
 
+@Repository
 class EventRepository(
         private val mongo: ReactiveFluentMongoOperations
 ) {
