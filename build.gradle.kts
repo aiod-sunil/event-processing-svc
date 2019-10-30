@@ -22,11 +22,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-    implementation("org.springframework.cloud:spring-cloud-stream")
-    implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")
-    implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka-streams")
+    implementation("org.springframework.cloud:spring-cloud-starter-stream-kafka")
     testImplementation("org.springframework.cloud:spring-cloud-stream-test-support")
-    testImplementation("org.springframework.kafka:spring-kafka-test")
     testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
