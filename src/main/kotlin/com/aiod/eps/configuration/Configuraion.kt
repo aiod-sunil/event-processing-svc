@@ -1,6 +1,7 @@
 package com.aiod.eps.configuration
 
 import com.aiod.eps.handler.EventHandler
+import com.aiod.eps.kafka.KafkaConsumer
 import com.aiod.eps.repository.EventRepository
 import com.aiod.eps.router.routes
 
@@ -11,6 +12,7 @@ import org.springframework.fu.kofu.webflux.webFlux
 val dataConfig= configuration {
     beans {
         bean<EventRepository>()
+        bean<KafkaConsumer>()
     }
     reactiveMongodb{
 //        embedded{

@@ -1,1 +1,8 @@
-
+spring:
+  cloud:
+    stream:
+      bindings:
+        kotlinFunction-in-0:
+                    destination: input
+        kotlinFunction-out-0:
+                    destination: output
